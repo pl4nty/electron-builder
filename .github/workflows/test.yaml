@@ -97,7 +97,7 @@ jobs:
       matrix:
         testFiles:
           - winCodeSignTest,differentialUpdateTest
-          - installerTest,appxTest,msiTest,portableTest,assistedInstallerTest,protonTest
+          - installerTest,appxTest,msixTest,msiTest,portableTest,assistedInstallerTest,protonTest
           - BuildTest,oneClickInstallerTest,winPackagerTest,nsisUpdaterTest,webInstallerTest
     steps:
       - name: Checkout code repository

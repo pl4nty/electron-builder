@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MSIX 1`] = `
+Object {
+  "win": Array [
+    Object {
+      "arch": "x64",
+      "file": "Test App ßW 1.1.0.msix",
+      "safeArtifactName": "TestApp-1.1.0.msix",
+    },
+  ],
+}
+`;
+
+exports[`auto launch 1`] = `
+Object {
+  "win": Array [
+    Object {
+      "arch": "x64",
+      "file": "Test App ßW 1.1.0.msix",
+      "safeArtifactName": "TestApp-1.1.0.msix",
+    },
+  ],
+}
+`;
+
+exports[`certificateSubjectName 1`] = `
+Object {
+  "win": Array [
+    Object {
+      "arch": "x64",
+      "file": "Test App ßW-1.1.0.msix",
+      "safeArtifactName": "TestApp-1.1.0.msix",
+    },
+  ],
+}
+`;
+
+exports[`languages and not signed (windows store only) 1`] = `
+Object {
+  "win": Array [
+    Object {
+      "arch": "ia32",
+      "file": "Test App ßW 1.1.0 ia32.msix",
+      "safeArtifactName": "TestApp-1.1.0.msix",
+    },
+    Object {
+      "arch": "x64",
+      "file": "Test App ßW 1.1.0.msix",
+      "safeArtifactName": "TestApp-1.1.0.msix",
+    },
+  ],
+}
+`;

@@ -44,7 +44,7 @@ export async function sign(options: WindowsSignOptions, packager: WinPackager): 
   // msi does not support dual-signing
   if (options.path.endsWith(".msi")) {
     hashes = [hashes != null && !hashes.includes("sha1") ? "sha256" : "sha1"]
-  } else if (options.path.endsWith(".appx")) {
+  } else if (options.path.endsWith(".appx") || options.path.endsWith(".msix")) {
     hashes = ["sha256"]
   } else if (hashes == null) {
     hashes = ["sha1", "sha256"]
@@ -151,7 +151,7 @@ export async function doSign(configuration: CustomWindowsSignTaskConfiguration, 
   let args: Array<string>
   let env = process.env
   let vm: VmManager
-  const vmRequired = configuration.path.endsWith(".appx") || !("file" in configuration.cscInfo!) /* certificateSubjectName and other such options */
+  const vmRequired = configuration.path.endsWith(".appx") || configuration.path.endsWith(".msix") || !("file" in configuration.cscInfo!) // certificateSubjectName and other such options
   const isWin = process.platform === "win32" || vmRequired
   const toolInfo = await getToolPath(isWin)
   const tool = toolInfo.path

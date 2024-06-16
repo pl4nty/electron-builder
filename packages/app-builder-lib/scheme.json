@@ -186,6 +186,15 @@
           "default": false,
           "type": "boolean"
         },
+        "format": {
+          "default": "appx",
+          "description": "The package format, either `appx` or `msix`. Defaults to `appx`. The [MSIX format](https://learn.microsoft.com/en-us/windows/msix/overview) is a superset of AppX and supersedes it.",
+          "enum": [
+            "appx",
+            "msix"
+          ],
+          "type": "string"
+        },
         "identityName": {
           "description": "The name. Corresponds to [Identity.Name](https://msdn.microsoft.com/en-us/library/windows/apps/br211441.aspx). Defaults to the [application name](/configuration/configuration#Metadata-name).",
           "type": [

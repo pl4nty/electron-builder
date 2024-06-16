@@ -2,6 +2,12 @@ import { TargetSpecificOptions } from "../core"
 
 export interface AppXOptions extends TargetSpecificOptions {
   /**
+   * The package format, either `appx` or `msix`. Defaults to `appx`. The [MSIX format](https://learn.microsoft.com/en-us/windows/msix/overview) is a superset of AppX and supersedes it.
+   * @default appx
+   */
+  readonly format?: "appx" | "msix"
+
+  /**
    * The application id. Defaults to `identityName`. This string contains alpha-numeric fields separated by periods. Each field must begin with an ASCII alphabetic character.
    */
   readonly applicationId?: string
