@@ -115,3 +115,13 @@ jobs:
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
           TEST_FILES: ${{ matrix.testFiles }}
           FORCE_COLOR: 1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tests.appx
+          path: C:\Users\RUNNER~1\AppData\Local\Temp\**\*.appx
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tests.msix
+          path: C:\Users\RUNNER~1\AppData\Local\Temp\**\*.msix

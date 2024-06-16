@@ -157,7 +157,7 @@ export async function assertPack(fixtureName: string, packagerOptions: PackagerO
         })
       }
     })(),
-    (): any => (tmpDir === checkOptions.tmpDir ? null : tmpDir.cleanup())
+    (): any => (tmpDir === checkOptions.tmpDir || process.platform === "win32" ? null : tmpDir.cleanup())
   )
 }
 
