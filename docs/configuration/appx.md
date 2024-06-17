@@ -4,6 +4,7 @@ All options are optional. All required for AppX configuration is inferred and co
 
 <!-- do not edit. start of generated block -->
 <ul>
+<li><code id="AppXOptions-format">format</code> = <code>appx</code> “appx” | “msix” - The package format, either <code>appx</code> or <code>msix</code>. Defaults to <code>appx</code>. The <a href="https://learn.microsoft.com/en-us/windows/msix/overview">MSIX format</a> is a superset of AppX and supersedes it.</li>
 <li><code id="AppXOptions-applicationId">applicationId</code> String - The application id. Defaults to <code>identityName</code>. This string contains alpha-numeric fields separated by periods. Each field must begin with an ASCII alphabetic character.</li>
 <li><code id="AppXOptions-backgroundColor">backgroundColor</code> = <code>#464646</code> String | “undefined” - The background color of the app tile. See <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211471.aspx">Visual Elements</a>.</li>
 <li><code id="AppXOptions-displayName">displayName</code> String | “undefined” - A friendly name that can be displayed to users. Corresponds to <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211432.aspx">Properties.DisplayName</a>. Defaults to the application product name.</li>
